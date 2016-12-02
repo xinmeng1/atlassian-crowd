@@ -30,6 +30,7 @@ RUN set -x \
     && cd ${CROWD_INSTALL}/crowd-webapp/WEB-INF/lib \
     && curl -SLO "https://gist.github.com/TommyLau/8a5ce4629d027f7884e6/raw/2c5a9b2a26fa0da8b78938c5da1ad57dc05ea1b0/atlassian-extras-3.2.jar" \
     && curl -SLO "https://raw.githubusercontent.com/xinmeng1/ShareFiles/master/mysql-connector-java-5.1.39-bin.jar" \
+    && curl -SLO "https://raw.githubusercontent.com/xinmeng1/ShareFiles/master/postgresql-9.4.1212.jar" \
     && chown -R ${RUN_USER}:${RUN_GROUP} ${CROWD_INSTALL} \
     && echo "crowd.home=${CROWD_HOME}" >> ${CROWD_INSTALL}/crowd-webapp/WEB-INF/classes/crowd-init.properties
 
